@@ -1,13 +1,98 @@
 /* reset css */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-html {
-  font-size: 62.5%;
-  font-family: sans-serif;
+html{
+    font-size: 62.5%; /* 10px */
 }
-body {
-  font-size: 1.6rem;
+body{
+    font-size: 1.6rem;
+}
+div{
+    content: none;
+}
+/* đây là clear css
+    nên làm cái nì đầu tiên trong khi code trình duyệt
+*/
+
+/* unit size : đơn vị do lượng
+    px | cm | mm 
+    đây là tỉ lệ cứng
+
+    %: ăn theo cha của nó
+    lòng quá nhiều lớp thì tính toán sẽ khó
+
+    em: coi font-size là một đơn vị (kẻ bị nguyền rủa)
+    tỉ lệ tính bằng font-size, khi tăng tỉ lệ mọi thứ sẽ được tăng theo
+
+    rem: coi font=size của html là 1 đơn vị
+
+*/
+/* .demo-text{
+    border: 2px solid red;
+    width: 200px;
+    box-sizing: border-box;
+} */
+.demo-ipt{
+    outline: none;
+    margin: 2rem;
+    padding: 1rem;
+    border: 2px solid red;
+    outline: 2px solid blue;
+    outline-offset: 0.5rem;
+}
+/* border */
+.demo-border{
+    border: 3px solid teal; 
+    /*  ^ short hand */
+    border-style: dotted;
+    border-top: 3px solid red;
+    border-left: 3px solid yellow;
+    border-right: 3px solid blue;
+    border-bottom: 3px solid rebeccapurple;
+    border-radius: 0.3rem;
+}
+/* 3 param width style color */
+
+/* circle */
+.circle{
+    width: 10rem;
+    height: 10rem;
+    background-color: cadetblue;
+    border-radius: 50%;
+}
+
+.triangle{
+    width: 10rem;
+    height: 10rem;
+    border: 2px solid red;
+    border-top: 5rem solid transparent;
+    border-bottom: 5rem solid red;
+    border-right: 5rem solid transparent;
+    border-left: 5rem solid transparent;
+}
+
+/* text */
+.demo-text{
+    color: steelblue;
+    background-color: bisque;
+    font-size: 2rem;
+    /* direction: ltr;
+    text-align: end; */
+    text-decoration: underline dashed chartreuse;
+    /* param: where style color */
+    text-indent: 3rem;
+    /* letter-spacing: 1rem;
+    word-spacing: 1rem; */
+    line-height: 2rem;
+    font-weight: 400;
+    font-style: italic;
+    text-shadow: 1px 1px 1px hotpink;
+}
+/* trên thực tế ngta thường dùng start end và center */
+
+.demo-text span{
+    vertical-align: super;
 }
