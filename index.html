@@ -3,27 +3,94 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bài 1: Model</title>
+    <title>03: css: flex-position</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <!-- outline | border | circle | unit size | text | vertical-align -->
-    <!-- outline khác với border 
-    thường xuất hiện ở input
-    không ảnh hưởng đến modelbox
-    margin >                           > border > padding > content          
-             outline > outline-offset
-    -->
-    <input class="demo-ipt" type="text" />
-    <!-- khi bấm vô input : border thành outline -->
-    <div class="demo-border">toi demo border</div>
-    <div class="circle"></div>
-    <div class="triangle"></div>
-    <p class="demo-text">xin chào bạn, <span>m</span>ình là địp đẹp trai</p>
-    <!-- body sẽ bọc, đường viền ở web tầm 8px 
-        muốn tìm ra thì phải -16px 
+    <p>
+      xin chào các bạn mình là pied đến từ đến từ fullhouse 1 ngày bên fullhouse
+      trả mình 8tr để dạy angular
+    </p>
 
-        box-sizing: border-box; kích thước từ border đi vào
-    -->
+    <!-- demo attribute onlick -->
+    <!-- khi mình click thì nó làm gì đó -->
+    <!-- tìm hiểu sau -->
+    <p class="demo-sticky" onclick="this.style.color='red'">
+      Baby ! Click me please!!!
+    </p>
+
+    <!-- flex: dùng để thay thế cho inline-block + font-size | float -->
+    <!-- được chia theo 2 trục:
+     justify(trục chính)
+     align(phụ)
+     
+     start: dồn về đầu
+     end: dồn về cuối
+     center ở giữa
+     content: căn chỉnh giữa các hàng
+
+     justify-content: trục chính, khoảng cách giữa các hàng
+     align-items: căn chỉnh các vật thể theo trục phụ của cả khối
+     align-content:
+     align-self;
+     flex-flow
+     flex-direction
+     flex-wrap
+     -->
+
+    <!-- demo chia layout bằng lfex -->
+    <div class="cha">
+      <div class="con1"></div>
+      <div class="con2"></div>
+    </div>
+
+    <!-- demo flex 2 -->
+    <div class="chachu">
+      <div class="chau">
+        <h1>Anh cháu thích cô chắc</h1>
+        <p>Nhà anh cháu bên trái kế nhà cô chắc</p>
+        <p>mà chắc có vẻ như cô chắc chắc không thích anh cháu</p>
+      </div>
+      <div class="chac">
+        <h1>Nhà cô chắc chác là bên phải sát nhà anh cháu</h1>
+        <p>anh cháu cái gì cũng tốt trừ đôi đôn chề</p>
+        <p>anh cháu có vui chơi với johny đen, và anh cáo</p>
+        <p>
+          dù rằng anh cháu có vẽ thích cô chắc nhưng chắc là chắc không thích
+          được anh cháu, vì anh cháu <br />
+          không chơi đồng dbrr
+        </p>
+      </div>
+    </div>
+
+    <!-- demo position -->
+    <!-- không nên lạm dụng position nhiều quá -->
+    <div class="big-div">
+      <div class="small-div">tôi là div nhỏ</div>
+      <p>
+        Ahihi xin chào cuộc đời <br />
+        dù nhiều lân khiến ta chơi vơi <br />
+        tuy học ít nhưng chơi cũng nhiều <br />
+        ahihi xin chào cuộc đời, <br />
+        chiều ăn bánh tối lại vào hang <br />
+      </p>
+    </div>
+
+    <!-- demo nút facebook -->
+    <div class="btn-fb">
+      <div class="icon">f</div>
+    </div>
+
+    <!-- psuedo element -->
+    <div class="ahihi">xin chào</div>
+
+    <!-- btn: pseudo element + position -->
+    <button class="btn-demo">BUTTON</button>
   </body>
 </html>
